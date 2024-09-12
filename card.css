@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.content{
+    position: relative;
+}
+.card{
+    text-align: center;
+    width: 30%;
+    background: radial-gradient(#a4bace, #1159ab, #d407ae, #041850);
+    padding: 30px;
+}
+.card:hover .content-text{
+    display: block;
+}
+.container img{
+    border-radius: 20px;
+}
+.card:hover img{
+    transform: translateY(-100px);
+    transition: all 2s ease-in-out;   /*property that moves up and down X and Y */
+}
+.content-text h2{
+    color: #1d0336;
+}
+.content a{
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    color: aqua;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+.container a:hover{
+    opacity: o.8;
+    background-color: rgb(36, 34, 65);
+    color: aqua;
+}
+.card:hover a{
+    transform: translateY(40px);
+    background-color: rgb(110, 16, 60);
+    color: white;
+    transition: all 2s ease-in-out;
+}
+.content-text{
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    animation-name: slow-mo;
+    animation-duration: 2.5s;
+    animation-delay: 1.3s;
+    animation-fill-mode:both ;
+    animation-iteration-count: 1;
+}
+@keyframes slow-mo{
+    100%{transform: rotateX(0);}
+    0%{transform: rotateX(90deg);}
+}
